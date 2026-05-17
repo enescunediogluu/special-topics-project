@@ -1,0 +1,58 @@
+{
+  "jobs_processed": 3,
+  "total_skill_mentions": 58,
+  "total_normalized_skills": 38,
+  "average_skills_per_job": 12.666666666666666,
+  "unique_skills": 24,
+  "top_skills": [
+    [
+      "Git",
+      3
+    ],
+    [
+      "Python",
+      2
+    ],
+    [
+      "JavaScript",
+      2
+    ],
+    [
+      "React",
+      2
+    ],
+    [
+      "Node.js",
+      2
+    ],
+    [
+      "pandas",
+      2
+    ],
+    [
+      "Vue",
+      2
+    ],
+    [
+      "NumPy",
+      2
+    ],
+    [
+      "TensorFlow",
+      2
+    ],
+    [
+      "PyTorch",
+      2
+    ]
+  ],
+  "entity_type_distribution": {
+    "TOOL": 11,
+    "FRAMEWORK": 10,
+    "LIBRARY": 10,
+    "PROGRAMMING_LANGUAGE": 5,
+    "DATABASE": 2
+  },
+  "esco_coverage": 86.8421052631579,
+  "dbpedia_coverage": 78.94736842105263
+}
