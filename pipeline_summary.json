@@ -22,7 +22,7 @@
       4
     ],
     [
-      "Go (game)",
+      "Go",
       3
     ],
     [
@@ -42,7 +42,7 @@
       2
     ],
     [
-      "Fremantle Football Club",
+      "Kubernetes",
       2
     ]
   ],
@@ -51,6 +51,6 @@
     "TOOL": 15,
     "FRAMEWORK": 8
   },
-  "esco_coverage": 67.5,
-  "dbpedia_coverage": 72.5
+  "esco_coverage": 120.0,
+  "dbpedia_coverage": 67.5
 }
