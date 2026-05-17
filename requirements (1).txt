@@ -1,0 +1,30 @@
+# Core NLP and Processing
+spacy>=3.5.0
+scikit-learn>=1.0.0
+numpy>=1.20.0
+
+# Data Processing
+pandas>=1.5.0
+
+# Utilities
+requests>=2.28.0
+python-dateutil>=2.8.0
+
+# Testing & Quality
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+# Optional: For advanced features
+# torch>=2.0.0  # For transformer-based models (optional)
+# transformers>=4.30.0  # For BERT/RoBERTa models (optional)
+# sentence-transformers>=2.2.0  # For semantic similarity (optional)
+
+# NOTE: Install spaCy model separately with:
+# python -m spacy download en_core_web_sm
+# or
+# pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
