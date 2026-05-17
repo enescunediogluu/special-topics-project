@@ -15,13 +15,13 @@ from pipeline_config_utils import (
     ExportManager, QualityMetrics
 )
 
-def process_real_csv_dataset(csv_filename="postings.csv", max_rows=10):
+# FIXED: Pass your pre-configured pipeline into this function so it uses your ESCO file
+def process_real_csv_dataset(pipeline, csv_filename="postings.csv", max_rows=10):
     """Reads real job data from a CSV file and processes it through the pipeline"""
     print("=" * 80)
     print(f"LOADING REAL SCRAPED DATASET FROM: {csv_filename}")
     print("=" * 80)
     
-    pipeline = SkillExtractionPipeline()
     batch_jobs = []
     
     # 1. Open and read your CSV file
@@ -61,11 +61,18 @@ def process_real_csv_dataset(csv_filename="postings.csv", max_rows=10):
 
 
 def main():
-    # Define the path to your CSV file (change name if your file is named differently)
+    # FIXED: Define the csv_file name first so it doesn't break
     csv_file = "postings.csv" 
     
-    # Run the processing on the first 10 rows of your real CSV dataset
-    results = process_real_csv_dataset(csv_filename=csv_file, max_rows=10)
+    # 1. Initialize the core pipeline
+    pipeline = SkillExtractionPipeline()
+    
+    # 2. Tell the ESCO utility to ingest your new file immediately
+    # Replace "digital_skills_esco.csv" with your actual file name!
+    pipeline.normalizer.esco.load_from_csv("digital_skills_esco.csv")
+    
+    # 3. Run your batch dataset processing, passing the configured pipeline in
+    results = process_real_csv_dataset(pipeline, csv_filename=csv_file, max_rows=10)
     
     if results:
         aggregator = ResultAggregator()

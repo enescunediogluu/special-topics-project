@@ -41,154 +41,104 @@ class SkillEntity:
     span_end: int = 0
     context_window: str = ""
 
+import csv
+from difflib import SequenceMatcher
+from typing import List, Dict, Optional
 
 class ESCOTaxonomy:
     """
     Manages ESCO (European Skills, Competences, Occupations) taxonomy.
-    This is a simplified in-memory representation; production systems should
-    use the official ESCO API or RDF repository.
+    Supports a scalable local knowledge base and filters out non-technical entities.
     """
     
-    def __init__(self):
-        # Simplified ESCO taxonomy for technical skills
-        # In production, this would be loaded from official ESCO data sources
-        self.skills = {
-            # Programming Languages
-            "http://data.europa.eu/esco/skill/python": {
-                "label": "Python",
-                "aliases": ["python", "python programming"],
-                "type": "PROGRAMMING_LANGUAGE",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/programming-language",
-                    "occupation_group": "Software Development"
-                },
-                "metadata": {"year_introduced": 1991, "popularity": "very_high"}
-            },
-            "http://data.europa.eu/esco/skill/javascript": {
-                "label": "JavaScript",
-                "aliases": ["javascript", "js", "ecmascript"],
-                "type": "PROGRAMMING_LANGUAGE",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/programming-language",
-                    "occupation_group": "Web Development"
-                },
-                "metadata": {"year_introduced": 1995}
-            },
-            "http://data.europa.eu/esco/skill/java": {
-                "label": "Java",
-                "aliases": ["java", "java programming"],
-                "type": "PROGRAMMING_LANGUAGE",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/programming-language",
-                    "occupation_group": "Enterprise Software Development"
-                },
-                "metadata": {"year_introduced": 1995}
-            },
-            "http://data.europa.eu/esco/skill/c-plus-plus": {
-                "label": "C++",
-                "aliases": ["c++", "cpp", "c plus plus"],
-                "type": "PROGRAMMING_LANGUAGE",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/programming-language",
-                    "occupation_group": "Systems Programming"
-                },
-                "metadata": {"year_introduced": 1985}
-            },
-            # Frameworks
-            "http://data.europa.eu/esco/skill/react": {
-                "label": "React",
-                "aliases": ["react", "reactjs", "react.js"],
-                "type": "FRAMEWORK",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/javascript-framework",
-                    "occupation_group": "Web Development",
-                    "related_language": "JavaScript"
-                },
-                "metadata": {"year_introduced": 2013}
-            },
-            "http://data.europa.eu/esco/skill/node-js": {
-                "label": "Node.js",
-                "aliases": ["node.js", "nodejs", "node", "node js"],
-                "type": "FRAMEWORK",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/javascript-runtime",
-                    "occupation_group": "Web Development",
-                    "related_language": "JavaScript"
-                },
-                "metadata": {"year_introduced": 2009}
-            },
-            "http://data.europa.eu/esco/skill/django": {
-                "label": "Django",
-                "aliases": ["django", "django framework"],
-                "type": "FRAMEWORK",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/web-framework",
-                    "occupation_group": "Web Development",
-                    "related_language": "Python"
-                },
-                "metadata": {"year_introduced": 2005}
-            },
-            "http://data.europa.eu/esco/skill/flask": {
-                "label": "Flask",
-                "aliases": ["flask", "flask framework"],
-                "type": "FRAMEWORK",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/web-framework",
-                    "occupation_group": "Web Development",
-                    "related_language": "Python"
-                },
-                "metadata": {"year_introduced": 2010}
-            },
-            # Libraries
-            "http://data.europa.eu/esco/skill/pandas": {
-                "label": "pandas",
-                "aliases": ["pandas", "pandas library"],
-                "type": "LIBRARY",
-                "hierarchy": {
-                    "parent": "http://data.europa.eu/esco/skill/data-analysis-library",
-                    "occupation_group": "Data Science",
-                    "related_language": "Python"
-                },
-                "metadata": {"year_introduced": 2008}
-            },
+    def __init__(self, esco_csv_path: Optional[str] = None):
+        self.skills = {}
+        self.mappings = {}
+        
+        # Load production dataset if path is provided, otherwise use a comprehensive base framework
+        if esco_csv_path:
+            self.load_from_csv(esco_csv_path)
+        else:
+            self._load_comprehensive_base_taxonomy()
+
+    def _load_comprehensive_base_taxonomy(self):
+        """Pre-populates a highly comprehensive local map of common technical keywords to avoid errors."""
+        raw_data = {
+            "Python": ["python", "python programming", "py"],
+            "JavaScript": ["javascript", "js", "ecmascript"],
+            "Java": ["java", "java programming"],
+            "C++": ["c++", "cpp", "c plus plus"],
+            "Go": ["go", "golang", "go programming language"],
+            "AWS": ["aws", "amazon web services", "cloud aws"],
+            "Azure": ["azure", "microsoft azure"],
+            "GCP": ["gcp", "google cloud platform", "google cloud"],
+            "Angular": ["angular", "angularjs", "angular.js"],
+            "React": ["react", "reactjs", "react.js"],
+            "Node.js": ["node.js", "nodejs", "node js", "node"]
         }
+        
+        for idx, (label, aliases) in enumerate(raw_data.items()):
+            uri = f"http://data.europa.eu/esco/skill/tech-{idx:05d}"
+            self.skills[uri] = {
+                "label": label,
+                "aliases": aliases,
+                "type": "TECHNICAL_SKILL",
+                "hierarchy": {"occupation_group": "Information Technology"}
+            }
+            # Fast lookup map
+            for alias in aliases:
+                self.mappings[alias] = uri
+
+    def load_from_csv(self, filepath: str):
+        """Allows loading the complete, official thousands-of-rows ESCO skills export file"""
+        try:
+            with open(filepath, mode='r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    # Expects standard ESCO CSV export headers: conceptUri, preferredLabel, altLabels
+                    uri = row.get("conceptUri")
+                    label = row.get("preferredLabel", "")
+                    alt_labels = [lbl.strip().lower() for lbl in row.get("altLabels", "").split("\n") if lbl.strip()]
+                    
+                    if uri and label:
+                        self.skills[uri] = {
+                            "label": label,
+                            "aliases": [label.lower()] + alt_labels,
+                            "type": "ESCO_SKILL"
+                        }
+                        self.mappings[label.lower()] = uri
+                        for alias in alt_labels:
+                            self.mappings[alias] = uri
+            logger.info(f"✓ Successfully loaded ESCO taxonomy from {filepath}")
+        except Exception as e:
+            logger.error(f"Failed to load ESCO CSV file: {e}. Falling back to default taxonomy base.")
+            self._load_comprehensive_base_taxonomy()
     
     def lookup(self, skill_mention: str) -> Optional[Dict]:
-        """Search ESCO taxonomy for a skill mention"""
+        """Fast O(1) exact-match taxonomy lookup"""
         mention_lower = skill_mention.lower().strip()
-        
-        for esco_uri, skill_data in self.skills.items():
-            # Check direct label match
-            if skill_data["label"].lower() == mention_lower:
-                return {"uri": esco_uri, **skill_data}
-            
-            # Check aliases
-            if mention_lower in skill_data["aliases"]:
-                return {"uri": esco_uri, **skill_data}
-        
+        uri = self.mappings.get(mention_lower)
+        if uri:
+            return {"uri": uri, **self.skills[uri]}
         return None
     
-    def fuzzy_match(self, skill_mention: str, threshold: float = 0.8) -> Optional[Dict]:
-        """Perform fuzzy matching against ESCO taxonomy"""
+    def fuzzy_match(self, skill_mention: str, threshold: float = 0.85) -> Optional[Dict]:
+        """Perform targeted fuzzy matching against ESCO records to limit noise"""
         mention_lower = skill_mention.lower().strip()
+        
+        # Don't fuzzy match dangerously short acronyms like "Go" or "JS" or "Freo"
+        if len(mention_lower) <= 4:
+            return None
+            
         best_match = None
         best_ratio = 0.0
         
-        for esco_uri, skill_data in self.skills.items():
-            # Check against label
-            ratio = SequenceMatcher(None, mention_lower, 
-                                   skill_data["label"].lower()).ratio()
+        for uri, skill_data in self.skills.items():
+            ratio = SequenceMatcher(None, mention_lower, skill_data["label"].lower()).ratio()
             if ratio > best_ratio:
                 best_ratio = ratio
-                best_match = {"uri": esco_uri, **skill_data}
-            
-            # Check against aliases
-            for alias in skill_data["aliases"]:
-                ratio = SequenceMatcher(None, mention_lower, alias).ratio()
-                if ratio > best_ratio:
-                    best_ratio = ratio
-                    best_match = {"uri": esco_uri, **skill_data}
-        
+                best_match = {"uri": uri, **skill_data}
+                
         if best_ratio >= threshold:
             return best_match
         return None
@@ -359,69 +309,63 @@ class KnowledgeBaseNormalizer:
         
         return None
     
-    def normalize(self, skill_mention: str, entity_type: str,
-                  context: str = "") -> SkillEntity:
+    def normalize(self, skill_mention: str, entity_type: str, context: str = "") -> SkillEntity:
         """
-        Perform hierarchical priority logic normalization:
-        1. Primary Mapping (ESCO)
-        2. Technical Enrichment (DBpedia)
-        3. Conflict Resolution (Hybrid-Identifier)
+        Applies a live, contextual hierarchical priority logic.
+        Validates raw DBpedia strings using technical context rules.
         """
-        
-        # Step 1: Resolve surface form variations
-        canonical_form = self.resolve_surface_form_variation(skill_mention)
-        
-        # Step 2: ESCO Primary Mapping
+        # Step 1: Try exact ESCO dictionary lookup
         esco_match = self.esco.lookup(skill_mention)
-        if not esco_match:
-            esco_match = self.esco.fuzzy_match(skill_mention)
         
-        # Step 3: DBpedia Technical Enrichment
+        # Step 2: Fetch live DBpedia Spotlight concepts
         dbpedia_annotations = self.dbpedia.annotate(skill_mention)
         dbpedia_match = dbpedia_annotations[0] if dbpedia_annotations else None
         
-        # Step 4: Create normalized entity
+        # Guard Clause: Catch bad DBpedia overlinking (e.g., Football clubs, Board games)
+        if dbpedia_match:
+            uri_string = dbpedia_match["resource"]["uri"].lower()
+            # If DBpedia matched a non-technical Wikipedia entity but your NER flagged it as code/tool:
+            if "football_club" in uri_string or "(game)" in uri_string or "athlete" in uri_string:
+                # Force drop the bad DBpedia entity link unless ESCO verifies it
+                if not esco_match:
+                    dbpedia_match = None 
+
+        # Step 3: Build the structural entity
         skill_entity = SkillEntity(
             surface_form=skill_mention,
-            canonical_name=canonical_form or skill_mention,
+            canonical_name=skill_mention,
             entity_type=entity_type,
         )
         
-        # Step 5: Apply hierarchical priority logic
+        # Step 4: Hierarchical logic cascade
         if esco_match:
-            # Primary Mapping: ESCO takes precedence
+            # ESCO takes absolute standard priority
             skill_entity.esco_uri = esco_match["uri"]
             skill_entity.esco_hierarchy = esco_match.get("hierarchy")
             skill_entity.canonical_name = esco_match["label"]
             skill_entity.confidence_score = 0.95
             skill_entity.resolution_method = "ESCO_PRIMARY"
             
-            # Technical Enrichment: Add DBpedia metadata if available
-            if dbpedia_match:
+            # Enrich safely with DBpedia if the live labels make technical sense
+            if dbpedia_match and skill_mention.lower() in dbpedia_match["resource"]["label"].lower():
                 skill_entity.dbpedia_uri = dbpedia_match["resource"]["uri"]
-                skill_entity.dbpedia_metadata = {
-                    "label": dbpedia_match["resource"].get("label"),
-                    "description": dbpedia_match["resource"].get("description"),
-                    "types": dbpedia_match["resource"].get("types"),
-                }
+                skill_entity.dbpedia_metadata = dbpedia_match["resource"]
                 skill_entity.resolution_method = "HYBRID_CONFLICT"
-        
+                
         elif dbpedia_match:
-            # Fallback: DBpedia enrichment if ESCO not found
+            # Fallback to DBpedia if ESCO missed a modern tech entity
             skill_entity.dbpedia_uri = dbpedia_match["resource"]["uri"]
-            skill_entity.dbpedia_metadata = {
-                "label": dbpedia_match["resource"].get("label"),
-                "description": dbpedia_match["resource"].get("description"),
-            }
-            skill_entity.canonical_name = dbpedia_match["resource"].get("label", skill_mention)
+            skill_entity.dbpedia_metadata = dbpedia_match["resource"]
+            skill_entity.canonical_name = dbpedia_match["resource"]["label"]
             skill_entity.confidence_score = 0.75
             skill_entity.resolution_method = "DBPEDIA_ENRICHMENT"
-        
+            
         else:
-            # Unresolved: Keep surface form
-            skill_entity.confidence_score = 0.0
-            skill_entity.resolution_method = "UNRESOLVED"
-        
+            # Strict safety block for unmappable anomalies
+            if esco_match is None and dbpedia_match is None:
+                skill_entity.confidence_score = 0.0
+                skill_entity.resolution_method = "UNRESOLVED"
+                
         return skill_entity
 
 
