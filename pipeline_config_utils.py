@@ -233,57 +233,69 @@ class ExportManager:
     def to_database_schema(results: List[Dict]) -> Dict:
         """
         Generate database schema and insertion statements for SQL integration.
-        Supports direct database integration as mentioned in the paper.
+        Perfectly matches the 3-table relational design specified in the project report.
         """
         schema = {
             "tables": {
-                "jobs": {
+                "Jobs": {
                     "columns": {
                         "job_id": "VARCHAR(255) PRIMARY KEY",
                         "timestamp": "DATETIME",
                         "original_text": "TEXT"
                     }
                 },
-                "extracted_skills": {
+                "Skills": {
                     "columns": {
-                        "skill_id": "VARCHAR(255) PRIMARY KEY",
-                        "job_id": "VARCHAR(255) FOREIGN KEY",
-                        "surface_form": "VARCHAR(255)",
-                        "canonical_name": "VARCHAR(255)",
+                        "canonical_name": "VARCHAR(255) PRIMARY KEY",
                         "entity_type": "VARCHAR(50)",
-                        "confidence_score": "FLOAT",
                         "esco_uri": "VARCHAR(500)",
-                        "dbpedia_uri": "VARCHAR(500)",
+                        "dbpedia_uri": "VARCHAR(500)"
+                    }
+                },
+                "Job_Skills": {
+                    "columns": {
+                        "job_id": "VARCHAR(255) REFERENCES Jobs(job_id)",
+                        "canonical_name": "VARCHAR(255) REFERENCES Skills(canonical_name)",
+                        "surface_form": "VARCHAR(255)",
+                        "confidence_score": "FLOAT",
                         "resolution_method": "VARCHAR(50)"
                     },
-                    "indexes": ["job_id", "canonical_name", "entity_type"]
+                    "primary_key": ["job_id", "canonical_name"]
                 }
             },
             "insert_statements": {
-                "jobs": [],
-                "skills": []
+                "Jobs": [],
+                "Skills": [],
+                "Job_Skills": []
             }
         }
         
-        # Generate sample INSERT statements
+        seen_skills = set()
         for result in results:
             job_id = result.get("job_id")
-            schema["insert_statements"]["jobs"].append(
-                f"INSERT INTO jobs (job_id, timestamp, original_text) "
-                f"VALUES ('{job_id}', '{result.get('timestamp')}', '...');"
+            schema["insert_statements"]["Jobs"].append(
+                f"INSERT INTO Jobs (job_id, timestamp, original_text) VALUES ('{job_id}', '{result.get('timestamp')}', '...');"
             )
             
             for skill in result.get("skills", []):
-                skill_id = f"{job_id}_{skill.get('canonical_name').replace(' ', '_')}"
-                schema["insert_statements"]["skills"].append({
-                    "skill_id": skill_id,
+                canonical = skill.get("canonical_name")
+                
+                # Populate global Skills table uniquely
+                if canonical not in seen_skills:
+                    seen_skills.add(canonical)
+                    schema["insert_statements"]["Skills"].append({
+                        "canonical_name": canonical,
+                        "entity_type": skill.get("entity_type"),
+                        "esco_uri": skill.get("esco_uri"),
+                        "dbpedia_uri": skill.get("dbpedia_uri")
+                    })
+                
+                # Populate associative bridge table
+                schema["insert_statements"]["Job_Skills"].append({
                     "job_id": job_id,
+                    "canonical_name": canonical,
                     "surface_form": skill.get("surface_form"),
-                    "canonical_name": skill.get("canonical_name"),
-                    "entity_type": skill.get("entity_type"),
                     "confidence_score": skill.get("confidence_score"),
-                    "esco_uri": skill.get("esco_uri"),
-                    "dbpedia_uri": skill.get("dbpedia_uri"),
                     "resolution_method": skill.get("resolution_method")
                 })
         
