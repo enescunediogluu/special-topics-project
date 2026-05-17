@@ -1,7 +1,7 @@
 [
   {
     "job_id": "scraped_job_001",
-    "timestamp": "2026-05-18T00:20:35.889412",
+    "timestamp": "2026-05-18T00:31:40.469943",
     "original_text": "Position: C# Software Engineer.\nSkills: C#, .NET, WPF, ASP.NET MVC, WebAPI, C++, Programmable Logic Controllers, SQL Server, ASP.net, HTML5, CSS, Javascript, Git, Unity Engine, Desktop app design, Web app design, Mobile app design, Database design",
     "extraction_stats": {
       "total_mentions": 2,
@@ -55,7 +55,7 @@
   },
   {
     "job_id": "scraped_job_002",
-    "timestamp": "2026-05-18T00:20:36.724146",
+    "timestamp": "2026-05-18T00:31:41.245919",
     "original_text": "Position: Software Implementation Engineer.\nSkills: Software Implementation, Software Testing, Software Deployment, Training, Warehouse Operations, IT Hardware, IT Software, Project Leadership, Startup Environment, Configuration, Testing, Internal Testing, Interface Testing, Integrated Testing, AutoStore, FulfillX, Client Host Systems, Integration Engineering, EndtoEnd Testing, Customer Training, PostHandover Support, Travel, Demo Grid, LinkedIn",
     "extraction_stats": {
       "total_mentions": 0,
@@ -68,7 +68,7 @@
   },
   {
     "job_id": "scraped_job_003",
-    "timestamp": "2026-05-18T00:20:36.747264",
+    "timestamp": "2026-05-18T00:31:41.264298",
     "original_text": "Position: Senior Software Engineer, Back End (Go, AWS, Java).\nSkills: Java, Python, SQL, Node.js, Go, Scala, AWS, GCP, Azure, Kafka, Stream processing, Agile, Open source frameworks",
     "extraction_stats": {
       "total_mentions": 10,
@@ -231,7 +231,7 @@
   },
   {
     "job_id": "scraped_job_004",
-    "timestamp": "2026-05-18T00:20:40.152640",
+    "timestamp": "2026-05-18T00:31:44.546314",
     "original_text": "Position: Senior Manager, Software Engineering, Full Stack.\nSkills: JavaScript, Java, TypeScript, SQL, Python, Go, AWS, Microsoft Azure, Google Cloud, Open source frameworks, Agile practices",
     "extraction_stats": {
       "total_mentions": 6,
@@ -376,7 +376,7 @@
   },
   {
     "job_id": "scraped_job_005",
-    "timestamp": "2026-05-18T00:20:42.092715",
+    "timestamp": "2026-05-18T00:31:46.548114",
     "original_text": "Position: Lead Software Engineer, Full Stack(JavaScript/Java/AWS).\nSkills: JavaScript, Java, AWS, Vue.js, HTML/CSS, TypeScript, SQL, Node.js, Docker, Kubernetes, Angular, GCP, Microsoft Azure, Agile",
     "extraction_stats": {
       "total_mentions": 13,
@@ -589,7 +589,7 @@
   },
   {
     "job_id": "scraped_job_006",
-    "timestamp": "2026-05-18T00:20:46.546056",
+    "timestamp": "2026-05-18T00:31:50.907083",
     "original_text": "Position: Sr. Software Engineer.\nSkills: Application design, Analysis, Programming, Testing, Documentation, Information systems solutions, Systems scope, Objectives, Factfinding, Application systems, Procedures, Capacity, Operating time, Response time, Program/system test plans, Data verification methods, Standard system procedures, Troubleshooting, Performance events, System downtime, Software products, Hardware products, Technical resource, Information technology, Application development metho...",
     "extraction_stats": {
       "total_mentions": 0,
@@ -602,7 +602,7 @@
   },
   {
     "job_id": "scraped_job_007",
-    "timestamp": "2026-05-18T00:20:46.616126",
+    "timestamp": "2026-05-18T00:31:50.981363",
     "original_text": "Position: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, JavaScript, AWS, Cloud Computing, Cloud Services, Open Source Frameworks, Agile Practices",
     "extraction_stats": {
       "total_mentions": 10,
@@ -751,7 +751,7 @@
   },
   {
     "job_id": "scraped_job_008",
-    "timestamp": "2026-05-18T00:20:49.940280",
+    "timestamp": "2026-05-18T00:31:54.291886",
     "original_text": "Position: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, JavaScript, HTML/CSS, TypeScript, SQL, Go, Open Source RDBMS, NoSQL databases, Container Orchestration services, Docker, Kubernetes, AWS tools and services, Distributed microservices, Full stack systems, Agile practices, Cloud computing",
     "extraction_stats": {
       "total_mentions": 13,
@@ -968,7 +968,7 @@
   },
   {
     "job_id": "scraped_job_009",
-    "timestamp": "2026-05-18T00:20:54.301317",
+    "timestamp": "2026-05-18T00:31:58.562864",
     "original_text": "Position: Senior Software Engineer.\nSkills: Linux, U Boot, Low level drivers, Board support packages, System on chip, Stratix 10, Ultra Scale Plus, Arria 10, ARM Processors, A9, A5, A53, Ethernet communications, 10GbE, 10G+, Configuration management, Version control, Ruggedized airborne recorders, Software Code, Objectoriented software engineering, Application development, SQL, Microsoft SQL Server, Troubleshooting, Communication skills, Analytical thinking, Critical thinking",
     "extraction_stats": {
       "total_mentions": 0,
@@ -981,7 +981,7 @@
   },
   {
     "job_id": "scraped_job_010",
-    "timestamp": "2026-05-18T00:20:54.323763",
+    "timestamp": "2026-05-18T00:31:58.584545",
     "original_text": "Position: Senior Software Engineer.\nSkills: Linux, UBoot, Low Level Drivers, Board Support Packages, System on Chip, Stratix 10, Ultra Scale Plus, Arria 10, Hard Processors, FPGA, ARM Processors, A9, A5, A53, Ethernet Communications, 10GbE, 10G+, Configuration Management, Version Control, Ruggedized Airborne Recorders, Objectoriented Software Engineering, Application Development, Clean Code, Complex Problem Solving, Critical Thinking, SQL, Microsoft SQL Server, Troubleshooting, Communication Ski...",
     "extraction_stats": {
       "total_mentions": 0,
