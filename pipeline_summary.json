@@ -1,0 +1,56 @@
+{
+  "jobs_processed": 10,
+  "total_skill_mentions": 54,
+  "total_normalized_skills": 40,
+  "average_skills_per_job": 4.0,
+  "unique_skills": 14,
+  "top_skills": [
+    [
+      "JavaScript",
+      5
+    ],
+    [
+      "Java",
+      5
+    ],
+    [
+      "AWS",
+      5
+    ],
+    [
+      "Python",
+      4
+    ],
+    [
+      "Go (game)",
+      3
+    ],
+    [
+      "Azure",
+      3
+    ],
+    [
+      "Angular",
+      3
+    ],
+    [
+      "Node.js",
+      2
+    ],
+    [
+      "GCP",
+      2
+    ],
+    [
+      "Fremantle Football Club",
+      2
+    ]
+  ],
+  "entity_type_distribution": {
+    "PROGRAMMING_LANGUAGE": 17,
+    "TOOL": 15,
+    "FRAMEWORK": 8
+  },
+  "esco_coverage": 67.5,
+  "dbpedia_coverage": 72.5
+}

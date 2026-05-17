@@ -1,0 +1,927 @@
+[
+  {
+    "job_id": "scraped_job_001",
+    "timestamp": "2026-05-18T00:01:02.314716",
+    "original_text": "Position: C# Software Engineer.\nSkills: C#, .NET, WPF, ASP.NET MVC, WebAPI, C++, Programmable Logic Controllers, SQL Server, ASP.net, HTML5, CSS, Javascript, Git, Unity Engine, Desktop app design, Web app design, Mobile app design, Database design",
+    "extraction_stats": {
+      "total_mentions": 2,
+      "unique_skills": 2,
+      "normalized_skills": 2,
+      "esco_mapped": 1,
+      "dbpedia_mapped": 1
+    },
+    "skills": [
+      {
+        "surface_form": "Javascript",
+        "canonical_name": "JavaScript",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/javascript",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Web Development"
+        },
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.95,
+        "resolution_method": "ESCO_PRIMARY",
+        "span_start": 146,
+        "span_end": 156,
+        "context_window": "gic Controllers, SQL Server, ASP.net, HTML5, CSS, Javascript, Git, Unity Engine, Desktop app design, Web app d"
+      },
+      {
+        "surface_form": "Git",
+        "canonical_name": "Git",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Git",
+        "dbpedia_metadata": {
+          "label": "Git",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q7397, Wikidata:Q386724, Schema:CreativeWork, DBpedia:Work, DBpedia:Software"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 158,
+        "span_end": 161,
+        "context_window": "ers, SQL Server, ASP.net, HTML5, CSS, Javascript, Git, Unity Engine, Desktop app design, Web app design"
+      }
+    ]
+  },
+  {
+    "job_id": "scraped_job_002",
+    "timestamp": "2026-05-18T00:01:04.123518",
+    "original_text": "Position: Software Implementation Engineer.\nSkills: Software Implementation, Software Testing, Software Deployment, Training, Warehouse Operations, IT Hardware, IT Software, Project Leadership, Startup Environment, Configuration, Testing, Internal Testing, Interface Testing, Integrated Testing, AutoStore, FulfillX, Client Host Systems, Integration Engineering, EndtoEnd Testing, Customer Training, PostHandover Support, Travel, Demo Grid, LinkedIn",
+    "extraction_stats": {
+      "total_mentions": 0,
+      "unique_skills": 0,
+      "normalized_skills": 0,
+      "esco_mapped": 0,
+      "dbpedia_mapped": 0
+    },
+    "skills": []
+  },
+  {
+    "job_id": "scraped_job_003",
+    "timestamp": "2026-05-18T00:01:04.148756",
+    "original_text": "Position: Senior Software Engineer, Back End (Go, AWS, Java).\nSkills: Java, Python, SQL, Node.js, Go, Scala, AWS, GCP, Azure, Kafka, Stream processing, Agile, Open source frameworks",
+    "extraction_stats": {
+      "total_mentions": 10,
+      "unique_skills": 7,
+      "normalized_skills": 7,
+      "esco_mapped": 4,
+      "dbpedia_mapped": 5
+    },
+    "skills": [
+      {
+        "surface_form": "Java",
+        "canonical_name": "Java",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/java",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Enterprise Software Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/Java",
+        "dbpedia_metadata": {
+          "label": "Java",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q23442, Schema:Place, DBpedia:PopulatedPlace, DBpedia:Place, DBpedia:Location, DBpedia:Island",
+          "types": [
+            "Wikidata:Q23442",
+            "Schema:Place",
+            "DBpedia:PopulatedPlace",
+            "DBpedia:Place",
+            "DBpedia:Location",
+            "DBpedia:Island"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 55,
+        "span_end": 59,
+        "context_window": "ion: Senior Software Engineer, Back End (Go, AWS, Java).\nSkills: Java, Python, SQL, Node.js, Go, Scala, "
+      },
+      {
+        "surface_form": "Python",
+        "canonical_name": "Python",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/python",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Software Development"
+        },
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.95,
+        "resolution_method": "ESCO_PRIMARY",
+        "span_start": 76,
+        "span_end": 82,
+        "context_window": "Engineer, Back End (Go, AWS, Java).\nSkills: Java, Python, SQL, Node.js, Go, Scala, AWS, GCP, Azure, Kafka,"
+      },
+      {
+        "surface_form": "Node.js",
+        "canonical_name": "Node.js",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": "http://data.europa.eu/esco/skill/node-js",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/javascript-runtime",
+          "occupation_group": "Web Development",
+          "related_language": "JavaScript"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/Node.js",
+        "dbpedia_metadata": {
+          "label": "Node.js",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q7397, Wikidata:Q386724, Schema:CreativeWork, DBpedia:Work, DBpedia:Software",
+          "types": [
+            "Wikidata:Q7397",
+            "Wikidata:Q386724",
+            "Schema:CreativeWork",
+            "DBpedia:Work",
+            "DBpedia:Software"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 89,
+        "span_end": 96,
+        "context_window": "k End (Go, AWS, Java).\nSkills: Java, Python, SQL, Node.js, Go, Scala, AWS, GCP, Azure, Kafka, Stream proces"
+      },
+      {
+        "surface_form": "Go",
+        "canonical_name": "Go (game)",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Go_(game)",
+        "dbpedia_metadata": {
+          "label": "Go (game)",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q1914636, Wikidata:Q11410, Http://www.ontologydesignpatterns.org/ont/d0.owl#Activity, DBpedia:Activity, DBpedia:Game"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 46,
+        "span_end": 48,
+        "context_window": "Position: Senior Software Engineer, Back End (Go, AWS, Java).\nSkills: Java, Python, SQL, Node.js, "
+      },
+      {
+        "surface_form": "AWS",
+        "canonical_name": "AWS",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 50,
+        "span_end": 53,
+        "context_window": "Position: Senior Software Engineer, Back End (Go, AWS, Java).\nSkills: Java, Python, SQL, Node.js, Go, S"
+      },
+      {
+        "surface_form": "GCP",
+        "canonical_name": "GCP",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 114,
+        "span_end": 117,
+        "context_window": "ills: Java, Python, SQL, Node.js, Go, Scala, AWS, GCP, Azure, Kafka, Stream processing, Agile, Open sou"
+      },
+      {
+        "surface_form": "Azure",
+        "canonical_name": "Azure",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 119,
+        "span_end": 124,
+        "context_window": " Java, Python, SQL, Node.js, Go, Scala, AWS, GCP, Azure, Kafka, Stream processing, Agile, Open source fra"
+      }
+    ]
+  },
+  {
+    "job_id": "scraped_job_004",
+    "timestamp": "2026-05-18T00:01:07.583945",
+    "original_text": "Position: Senior Manager, Software Engineering, Full Stack.\nSkills: JavaScript, Java, TypeScript, SQL, Python, Go, AWS, Microsoft Azure, Google Cloud, Open source frameworks, Agile practices",
+    "extraction_stats": {
+      "total_mentions": 6,
+      "unique_skills": 6,
+      "normalized_skills": 6,
+      "esco_mapped": 3,
+      "dbpedia_mapped": 3
+    },
+    "skills": [
+      {
+        "surface_form": "JavaScript",
+        "canonical_name": "JavaScript",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/javascript",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Web Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/JavaScript",
+        "dbpedia_metadata": {
+          "label": "JavaScript",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q9143, Wikidata:Q315, Schema:Language, DBpedia:Language, DBpedia:ProgrammingLanguage",
+          "types": [
+            "Wikidata:Q9143",
+            "Wikidata:Q315",
+            "Schema:Language",
+            "DBpedia:Language",
+            "DBpedia:ProgrammingLanguage"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 68,
+        "span_end": 78,
+        "context_window": "anager, Software Engineering, Full Stack.\nSkills: JavaScript, Java, TypeScript, SQL, Python, Go, AWS, Microsof"
+      },
+      {
+        "surface_form": "Java",
+        "canonical_name": "Java",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/java",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Enterprise Software Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/Java",
+        "dbpedia_metadata": {
+          "label": "Java",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q23442, Schema:Place, DBpedia:PopulatedPlace, DBpedia:Place, DBpedia:Location, DBpedia:Island",
+          "types": [
+            "Wikidata:Q23442",
+            "Schema:Place",
+            "DBpedia:PopulatedPlace",
+            "DBpedia:Place",
+            "DBpedia:Location",
+            "DBpedia:Island"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 80,
+        "span_end": 84,
+        "context_window": "ware Engineering, Full Stack.\nSkills: JavaScript, Java, TypeScript, SQL, Python, Go, AWS, Microsoft Azur"
+      },
+      {
+        "surface_form": "Python",
+        "canonical_name": "Python",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/python",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Software Development"
+        },
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.95,
+        "resolution_method": "ESCO_PRIMARY",
+        "span_start": 103,
+        "span_end": 109,
+        "context_window": "Stack.\nSkills: JavaScript, Java, TypeScript, SQL, Python, Go, AWS, Microsoft Azure, Google Cloud, Open sou"
+      },
+      {
+        "surface_form": "Go",
+        "canonical_name": "Go (game)",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Go_(game)",
+        "dbpedia_metadata": {
+          "label": "Go (game)",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q1914636, Wikidata:Q11410, Http://www.ontologydesignpatterns.org/ont/d0.owl#Activity, DBpedia:Activity, DBpedia:Game"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 111,
+        "span_end": 113,
+        "context_window": "kills: JavaScript, Java, TypeScript, SQL, Python, Go, AWS, Microsoft Azure, Google Cloud, Open source "
+      },
+      {
+        "surface_form": "AWS",
+        "canonical_name": "AWS",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 115,
+        "span_end": 118,
+        "context_window": "s: JavaScript, Java, TypeScript, SQL, Python, Go, AWS, Microsoft Azure, Google Cloud, Open source frame"
+      },
+      {
+        "surface_form": "Azure",
+        "canonical_name": "Azure",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 130,
+        "span_end": 135,
+        "context_window": "Java, TypeScript, SQL, Python, Go, AWS, Microsoft Azure, Google Cloud, Open source frameworks, Agile prac"
+      }
+    ]
+  },
+  {
+    "job_id": "scraped_job_005",
+    "timestamp": "2026-05-18T00:01:09.577403",
+    "original_text": "Position: Lead Software Engineer, Full Stack(JavaScript/Java/AWS).\nSkills: JavaScript, Java, AWS, Vue.js, HTML/CSS, TypeScript, SQL, Node.js, Docker, Kubernetes, Angular, GCP, Microsoft Azure, Agile",
+    "extraction_stats": {
+      "total_mentions": 13,
+      "unique_skills": 10,
+      "normalized_skills": 10,
+      "esco_mapped": 5,
+      "dbpedia_mapped": 7
+    },
+    "skills": [
+      {
+        "surface_form": "JavaScript",
+        "canonical_name": "JavaScript",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/javascript",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Web Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/JavaScript",
+        "dbpedia_metadata": {
+          "label": "JavaScript",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q9143, Wikidata:Q315, Schema:Language, DBpedia:Language, DBpedia:ProgrammingLanguage",
+          "types": [
+            "Wikidata:Q9143",
+            "Wikidata:Q315",
+            "Schema:Language",
+            "DBpedia:Language",
+            "DBpedia:ProgrammingLanguage"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 45,
+        "span_end": 55,
+        "context_window": "Position: Lead Software Engineer, Full Stack(JavaScript/Java/AWS).\nSkills: JavaScript, Java, AWS, Vue.js,"
+      },
+      {
+        "surface_form": "Java",
+        "canonical_name": "Java",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/java",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Enterprise Software Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/Java",
+        "dbpedia_metadata": {
+          "label": "Java",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q23442, Schema:Place, DBpedia:PopulatedPlace, DBpedia:Place, DBpedia:Location, DBpedia:Island",
+          "types": [
+            "Wikidata:Q23442",
+            "Schema:Place",
+            "DBpedia:PopulatedPlace",
+            "DBpedia:Place",
+            "DBpedia:Location",
+            "DBpedia:Island"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 56,
+        "span_end": 60,
+        "context_window": "on: Lead Software Engineer, Full Stack(JavaScript/Java/AWS).\nSkills: JavaScript, Java, AWS, Vue.js, HTML"
+      },
+      {
+        "surface_form": "Node.js",
+        "canonical_name": "Node.js",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": "http://data.europa.eu/esco/skill/node-js",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/javascript-runtime",
+          "occupation_group": "Web Development",
+          "related_language": "JavaScript"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/Node.js",
+        "dbpedia_metadata": {
+          "label": "Node.js",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q7397, Wikidata:Q386724, Schema:CreativeWork, DBpedia:Work, DBpedia:Software",
+          "types": [
+            "Wikidata:Q7397",
+            "Wikidata:Q386724",
+            "Schema:CreativeWork",
+            "DBpedia:Work",
+            "DBpedia:Software"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 133,
+        "span_end": 140,
+        "context_window": "pt, Java, AWS, Vue.js, HTML/CSS, TypeScript, SQL, Node.js, Docker, Kubernetes, Angular, GCP, Microsoft Azur"
+      },
+      {
+        "surface_form": "Docker",
+        "canonical_name": "Fremantle Football Club",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Fremantle_Football_Club",
+        "dbpedia_metadata": {
+          "label": "Fremantle Football Club",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q43229, Wikidata:Q24229398, Wikidata:Q12973014, DUL:SocialPerson, DUL:Agent, Schema:SportsTeam, Schema:Organization, DBpedia:SportsTeam, DBpedia:Organisation, DBpedia:Agent, DBpedia:AustralianFootballTeam"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 142,
+        "span_end": 148,
+        "context_window": " AWS, Vue.js, HTML/CSS, TypeScript, SQL, Node.js, Docker, Kubernetes, Angular, GCP, Microsoft Azure, Agile"
+      },
+      {
+        "surface_form": "Kubernetes",
+        "canonical_name": "Kubernetes",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Kubernetes",
+        "dbpedia_metadata": {
+          "label": "Kubernetes",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q7397, Wikidata:Q386724, Schema:CreativeWork, DBpedia:Work, DBpedia:Software"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 150,
+        "span_end": 160,
+        "context_window": "e.js, HTML/CSS, TypeScript, SQL, Node.js, Docker, Kubernetes, Angular, GCP, Microsoft Azure, Agile"
+      },
+      {
+        "surface_form": "Vue",
+        "canonical_name": "Vue",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 98,
+        "span_end": 101,
+        "context_window": "aScript/Java/AWS).\nSkills: JavaScript, Java, AWS, Vue.js, HTML/CSS, TypeScript, SQL, Node.js, Docker, K"
+      },
+      {
+        "surface_form": "Angular",
+        "canonical_name": "Angular",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 162,
+        "span_end": 169,
+        "context_window": "SS, TypeScript, SQL, Node.js, Docker, Kubernetes, Angular, GCP, Microsoft Azure, Agile"
+      },
+      {
+        "surface_form": "AWS",
+        "canonical_name": "AWS",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 61,
+        "span_end": 64,
+        "context_window": "ead Software Engineer, Full Stack(JavaScript/Java/AWS).\nSkills: JavaScript, Java, AWS, Vue.js, HTML/CSS"
+      },
+      {
+        "surface_form": "GCP",
+        "canonical_name": "GCP",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 171,
+        "span_end": 174,
+        "context_window": "cript, SQL, Node.js, Docker, Kubernetes, Angular, GCP, Microsoft Azure, Agile"
+      },
+      {
+        "surface_form": "Azure",
+        "canonical_name": "Azure",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 186,
+        "span_end": 191,
+        "context_window": "e.js, Docker, Kubernetes, Angular, GCP, Microsoft Azure, Agile"
+      }
+    ]
+  },
+  {
+    "job_id": "scraped_job_006",
+    "timestamp": "2026-05-18T00:01:14.072473",
+    "original_text": "Position: Sr. Software Engineer.\nSkills: Application design, Analysis, Programming, Testing, Documentation, Information systems solutions, Systems scope, Objectives, Factfinding, Application systems, Procedures, Capacity, Operating time, Response time, Program/system test plans, Data verification methods, Standard system procedures, Troubleshooting, Performance events, System downtime, Software products, Hardware products, Technical resource, Information technology, Application development metho...",
+    "extraction_stats": {
+      "total_mentions": 0,
+      "unique_skills": 0,
+      "normalized_skills": 0,
+      "esco_mapped": 0,
+      "dbpedia_mapped": 0
+    },
+    "skills": []
+  },
+  {
+    "job_id": "scraped_job_007",
+    "timestamp": "2026-05-18T00:01:14.103172",
+    "original_text": "Position: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, JavaScript, AWS, Cloud Computing, Cloud Services, Open Source Frameworks, Agile Practices",
+    "extraction_stats": {
+      "total_mentions": 10,
+      "unique_skills": 6,
+      "normalized_skills": 6,
+      "esco_mapped": 7,
+      "dbpedia_mapped": 5
+    },
+    "skills": [
+      {
+        "surface_form": "Java",
+        "canonical_name": "Java",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/java",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Enterprise Software Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/Java",
+        "dbpedia_metadata": {
+          "label": "Java",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q23442, Schema:Place, DBpedia:PopulatedPlace, DBpedia:Place, DBpedia:Location, DBpedia:Island",
+          "types": [
+            "Wikidata:Q23442",
+            "Schema:Place",
+            "DBpedia:PopulatedPlace",
+            "DBpedia:Place",
+            "DBpedia:Location",
+            "DBpedia:Island"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 46,
+        "span_end": 50,
+        "context_window": "Position: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, A"
+      },
+      {
+        "surface_form": "Python",
+        "canonical_name": "Python",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/python",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Software Development"
+        },
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.95,
+        "resolution_method": "ESCO_PRIMARY",
+        "span_start": 52,
+        "span_end": 58,
+        "context_window": "sition: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, "
+      },
+      {
+        "surface_form": "JavaScript",
+        "canonical_name": "JavaScript",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/javascript",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Web Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/JavaScript",
+        "dbpedia_metadata": {
+          "label": "JavaScript",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q9143, Wikidata:Q315, Schema:Language, DBpedia:Language, DBpedia:ProgrammingLanguage",
+          "types": [
+            "Wikidata:Q9143",
+            "Wikidata:Q315",
+            "Schema:Language",
+            "DBpedia:Language",
+            "DBpedia:ProgrammingLanguage"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 115,
+        "span_end": 125,
+        "context_window": "ar, React).\nSkills: Java, Python, Angular, React, JavaScript, AWS, Cloud Computing, Cloud Services, Open Sourc"
+      },
+      {
+        "surface_form": "React",
+        "canonical_name": "React",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": "http://data.europa.eu/esco/skill/react",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/javascript-framework",
+          "occupation_group": "Web Development",
+          "related_language": "JavaScript"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/React_Music_Limited",
+        "dbpedia_metadata": {
+          "label": "React Music Limited",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q4830453, Wikidata:Q43229, Wikidata:Q24229398, Wikidata:Q18127, DUL:SocialPerson, DUL:Agent, Schema:Organization, DBpedia:Organisation, DBpedia:Company, DBpedia:Agent, DBpedia:RecordLabel",
+          "types": [
+            "Wikidata:Q4830453",
+            "Wikidata:Q43229",
+            "Wikidata:Q24229398",
+            "Wikidata:Q18127",
+            "DUL:SocialPerson",
+            "DUL:Agent",
+            "Schema:Organization",
+            "DBpedia:Organisation",
+            "DBpedia:Company",
+            "DBpedia:Agent",
+            "DBpedia:RecordLabel"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 69,
+        "span_end": 74,
+        "context_window": "ware Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, JavaScrip"
+      },
+      {
+        "surface_form": "Angular",
+        "canonical_name": "Angular",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 60,
+        "span_end": 67,
+        "context_window": "Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, Ja"
+      },
+      {
+        "surface_form": "AWS",
+        "canonical_name": "AWS",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 127,
+        "span_end": 130,
+        "context_window": "Skills: Java, Python, Angular, React, JavaScript, AWS, Cloud Computing, Cloud Services, Open Source Fra"
+      }
+    ]
+  },
+  {
+    "job_id": "scraped_job_008",
+    "timestamp": "2026-05-18T00:01:17.489808",
+    "original_text": "Position: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, JavaScript, HTML/CSS, TypeScript, SQL, Go, Open Source RDBMS, NoSQL databases, Container Orchestration services, Docker, Kubernetes, AWS tools and services, Distributed microservices, Full stack systems, Agile practices, Cloud computing",
+    "extraction_stats": {
+      "total_mentions": 13,
+      "unique_skills": 9,
+      "normalized_skills": 9,
+      "esco_mapped": 7,
+      "dbpedia_mapped": 8
+    },
+    "skills": [
+      {
+        "surface_form": "Java",
+        "canonical_name": "Java",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/java",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Enterprise Software Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/Java",
+        "dbpedia_metadata": {
+          "label": "Java",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q23442, Schema:Place, DBpedia:PopulatedPlace, DBpedia:Place, DBpedia:Location, DBpedia:Island",
+          "types": [
+            "Wikidata:Q23442",
+            "Schema:Place",
+            "DBpedia:PopulatedPlace",
+            "DBpedia:Place",
+            "DBpedia:Location",
+            "DBpedia:Island"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 46,
+        "span_end": 50,
+        "context_window": "Position: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, A"
+      },
+      {
+        "surface_form": "Python",
+        "canonical_name": "Python",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/python",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Software Development"
+        },
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.95,
+        "resolution_method": "ESCO_PRIMARY",
+        "span_start": 52,
+        "span_end": 58,
+        "context_window": "sition: Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, "
+      },
+      {
+        "surface_form": "JavaScript",
+        "canonical_name": "JavaScript",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": "http://data.europa.eu/esco/skill/javascript",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/programming-language",
+          "occupation_group": "Web Development"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/JavaScript",
+        "dbpedia_metadata": {
+          "label": "JavaScript",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q9143, Wikidata:Q315, Schema:Language, DBpedia:Language, DBpedia:ProgrammingLanguage",
+          "types": [
+            "Wikidata:Q9143",
+            "Wikidata:Q315",
+            "Schema:Language",
+            "DBpedia:Language",
+            "DBpedia:ProgrammingLanguage"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 115,
+        "span_end": 125,
+        "context_window": "ar, React).\nSkills: Java, Python, Angular, React, JavaScript, HTML/CSS, TypeScript, SQL, Go, Open Source RDBMS"
+      },
+      {
+        "surface_form": "React",
+        "canonical_name": "React",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": "http://data.europa.eu/esco/skill/react",
+        "esco_hierarchy": {
+          "parent": "http://data.europa.eu/esco/skill/javascript-framework",
+          "occupation_group": "Web Development",
+          "related_language": "JavaScript"
+        },
+        "dbpedia_uri": "http://dbpedia.org/resource/React_Music_Limited",
+        "dbpedia_metadata": {
+          "label": "React Music Limited",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q4830453, Wikidata:Q43229, Wikidata:Q24229398, Wikidata:Q18127, DUL:SocialPerson, DUL:Agent, Schema:Organization, DBpedia:Organisation, DBpedia:Company, DBpedia:Agent, DBpedia:RecordLabel",
+          "types": [
+            "Wikidata:Q4830453",
+            "Wikidata:Q43229",
+            "Wikidata:Q24229398",
+            "Wikidata:Q18127",
+            "DUL:SocialPerson",
+            "DUL:Agent",
+            "Schema:Organization",
+            "DBpedia:Organisation",
+            "DBpedia:Company",
+            "DBpedia:Agent",
+            "DBpedia:RecordLabel"
+          ]
+        },
+        "confidence_score": 0.95,
+        "resolution_method": "HYBRID_CONFLICT",
+        "span_start": 69,
+        "span_end": 74,
+        "context_window": "ware Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, JavaScrip"
+      },
+      {
+        "surface_form": "Go",
+        "canonical_name": "Go (game)",
+        "entity_type": "PROGRAMMING_LANGUAGE",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Go_(game)",
+        "dbpedia_metadata": {
+          "label": "Go (game)",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q1914636, Wikidata:Q11410, Http://www.ontologydesignpatterns.org/ont/d0.owl#Activity, DBpedia:Activity, DBpedia:Game"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 154,
+        "span_end": 156,
+        "context_window": "ar, React, JavaScript, HTML/CSS, TypeScript, SQL, Go, Open Source RDBMS, NoSQL databases, Container Or"
+      },
+      {
+        "surface_form": "Docker",
+        "canonical_name": "Fremantle Football Club",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Fremantle_Football_Club",
+        "dbpedia_metadata": {
+          "label": "Fremantle Football Club",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q43229, Wikidata:Q24229398, Wikidata:Q12973014, DUL:SocialPerson, DUL:Agent, Schema:SportsTeam, Schema:Organization, DBpedia:SportsTeam, DBpedia:Organisation, DBpedia:Agent, DBpedia:AustralianFootballTeam"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 228,
+        "span_end": 234,
+        "context_window": "oSQL databases, Container Orchestration services, Docker, Kubernetes, AWS tools and services, Distributed "
+      },
+      {
+        "surface_form": "Kubernetes",
+        "canonical_name": "Kubernetes",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": "http://dbpedia.org/resource/Kubernetes",
+        "dbpedia_metadata": {
+          "label": "Kubernetes",
+          "description": "Live DBpedia resource entity of type: Wikidata:Q7397, Wikidata:Q386724, Schema:CreativeWork, DBpedia:Work, DBpedia:Software"
+        },
+        "confidence_score": 0.75,
+        "resolution_method": "DBPEDIA_ENRICHMENT",
+        "span_start": 236,
+        "span_end": 246,
+        "context_window": "abases, Container Orchestration services, Docker, Kubernetes, AWS tools and services, Distributed microservice"
+      },
+      {
+        "surface_form": "Angular",
+        "canonical_name": "Angular",
+        "entity_type": "FRAMEWORK",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 60,
+        "span_end": 67,
+        "context_window": "Lead Software Engineer, Full Stack (Java, Python, Angular, React).\nSkills: Java, Python, Angular, React, Ja"
+      },
+      {
+        "surface_form": "AWS",
+        "canonical_name": "AWS",
+        "entity_type": "TOOL",
+        "esco_uri": null,
+        "esco_hierarchy": null,
+        "dbpedia_uri": null,
+        "dbpedia_metadata": null,
+        "confidence_score": 0.0,
+        "resolution_method": "UNRESOLVED",
+        "span_start": 248,
+        "span_end": 251,
+        "context_window": "ainer Orchestration services, Docker, Kubernetes, AWS tools and services, Distributed microservices, Fu"
+      }
+    ]
+  },
+  {
+    "job_id": "scraped_job_009",
+    "timestamp": "2026-05-18T00:01:21.832257",
+    "original_text": "Position: Senior Software Engineer.\nSkills: Linux, U Boot, Low level drivers, Board support packages, System on chip, Stratix 10, Ultra Scale Plus, Arria 10, ARM Processors, A9, A5, A53, Ethernet communications, 10GbE, 10G+, Configuration management, Version control, Ruggedized airborne recorders, Software Code, Objectoriented software engineering, Application development, SQL, Microsoft SQL Server, Troubleshooting, Communication skills, Analytical thinking, Critical thinking",
+    "extraction_stats": {
+      "total_mentions": 0,
+      "unique_skills": 0,
+      "normalized_skills": 0,
+      "esco_mapped": 0,
+      "dbpedia_mapped": 0
+    },
+    "skills": []
+  },
+  {
+    "job_id": "scraped_job_010",
+    "timestamp": "2026-05-18T00:01:21.853677",
+    "original_text": "Position: Senior Software Engineer.\nSkills: Linux, UBoot, Low Level Drivers, Board Support Packages, System on Chip, Stratix 10, Ultra Scale Plus, Arria 10, Hard Processors, FPGA, ARM Processors, A9, A5, A53, Ethernet Communications, 10GbE, 10G+, Configuration Management, Version Control, Ruggedized Airborne Recorders, Objectoriented Software Engineering, Application Development, Clean Code, Complex Problem Solving, Critical Thinking, SQL, Microsoft SQL Server, Troubleshooting, Communication Ski...",
+    "extraction_stats": {
+      "total_mentions": 0,
+      "unique_skills": 0,
+      "normalized_skills": 0,
+      "esco_mapped": 0,
+      "dbpedia_mapped": 0
+    },
+    "skills": []
+  }
+]
