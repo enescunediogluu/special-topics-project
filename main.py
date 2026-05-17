@@ -62,7 +62,7 @@ def process_real_csv_dataset(csv_filename="postings.csv", max_rows=10):
 
 def main():
     # Define the path to your CSV file (change name if your file is named differently)
-    csv_file = "scraped_jobs.csv" 
+    csv_file = "postings.csv" 
     
     # Run the processing on the first 10 rows of your real CSV dataset
     results = process_real_csv_dataset(csv_filename=csv_file, max_rows=10)

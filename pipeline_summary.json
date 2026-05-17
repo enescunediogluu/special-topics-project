@@ -1,58 +1,56 @@
 {
-  "jobs_processed": 3,
-  "total_skill_mentions": 58,
-  "total_normalized_skills": 38,
-  "average_skills_per_job": 12.666666666666666,
-  "unique_skills": 24,
+  "jobs_processed": 10,
+  "total_skill_mentions": 54,
+  "total_normalized_skills": 40,
+  "average_skills_per_job": 4.0,
+  "unique_skills": 14,
   "top_skills": [
     [
-      "Git",
-      3
+      "JavaScript",
+      5
+    ],
+    [
+      "Java",
+      5
+    ],
+    [
+      "AWS",
+      5
     ],
     [
       "Python",
-      2
+      4
     ],
     [
-      "JavaScript",
-      2
+      "Go",
+      3
     ],
     [
-      "React",
-      2
+      "Azure",
+      3
+    ],
+    [
+      "Angular",
+      3
     ],
     [
       "Node.js",
       2
     ],
     [
-      "pandas",
+      "GCP",
       2
     ],
     [
-      "Vue",
-      2
-    ],
-    [
-      "NumPy",
-      2
-    ],
-    [
-      "TensorFlow",
-      2
-    ],
-    [
-      "PyTorch",
+      "Docker",
       2
     ]
   ],
   "entity_type_distribution": {
-    "TOOL": 11,
-    "FRAMEWORK": 10,
-    "LIBRARY": 10,
-    "PROGRAMMING_LANGUAGE": 5,
-    "DATABASE": 2
+    "PROGRAMMING_LANGUAGE": 17,
+    "TOOL": 15,
+    "FRAMEWORK": 8
   },
-  "esco_coverage": 86.8421052631579,
-  "dbpedia_coverage": 78.94736842105263
+  "esco_coverage": 67.5,
+  "dbpedia_coverage": 67.5
 }
